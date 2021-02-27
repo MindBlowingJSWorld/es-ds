@@ -24,13 +24,7 @@ describe("ArrayQueueImpl Tests", () => {
 
   // print all records from queue
   const printData = () => {
-    let current: any = instance.getTop();
-    const dataItems = [];
-      do {
-        dataItems.push(`${current.value}`);
-        current = current.next;
-      } while(current);
-      console.log(`Data in the queue: [${dataItems.join(",")}]`);  
+    console.log(`Data in the queue: [${instance.getDataItems().join(",")}]`); 
   };
 
   // Drain the queue
